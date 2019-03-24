@@ -1,10 +1,35 @@
 # MazeBuilder
 Just a simple Pytthon script for generating .png image of a *(pseudo)* random maze
 
-### Usage:
-`python main.py maze_dimensions maze_out_file_name`
+## Usage:
+```
+python main.py maze_out_file_name maze_dimensions output_mode
 
-**maze_dimensions** - size of desired maze (from 12px to 64px). \
-*Atm any even number will be floored to odd number i.e. 12 > 11 and 44 > 43*
+maze_out_file_name - name of the output image file. 
+maze_dimensions - size of desired maze (12-64px). 
+    Atm any even number will be floored to odd i.e. 12 > 11 and 44 > 43
+output_mode - specifies in which file format output will be presented (for now just .png)
+```
 
-**maze_out_file_name** - name of the output image file. 
+
+# License
+
+Copyright (c) 2019 IanDrunk
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
