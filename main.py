@@ -3,7 +3,7 @@ import sys
 import random
 
 from scr.Maze import Maze
-from scr.ImageWriter import ImageWriter
+from scr.img.ImageWriter import ImageWriter
 
 # Constants
 ARG_COUNT = 3

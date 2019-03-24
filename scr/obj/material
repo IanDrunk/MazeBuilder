@@ -1,0 +1,16 @@
+# MazeBiulder .mtl template
+# This file is a reference material that will be applied to all generated mazes
+#
+# About MazeBiulder project - https://github.com/IanDrunk/MazeBuilder
+# More on .mtl file format - https://en.wikipedia.org/wiki/Wavefront_.obj_file#Material_template_library
+
+# Material name
+newmtl MazeMat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
