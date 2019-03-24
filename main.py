@@ -1,4 +1,9 @@
+import os
 import sys
+import random
+
+from scr.Maze import Maze
+from scr.ImageWriter import ImageWriter
 
 # Constants
 ARG_COUNT = 3
@@ -35,8 +40,37 @@ if not name.isalnum():
 if size % 2 == 0:
     size -= 1
 
-# TODO: Create empty maze and start building it
-# TODO: Save maze as png
+# Create empty maze and start building it
+maze = Maze(size)
+
+# Create start cell at the random position at the top
+start_y = random.randrange(size)
+if start_y % 2 == 0:
+    if start_y == 0:
+        start_y += 1
+    else:
+        start_y -= 1
+maze.layout[0][start_y].set_type('air')
+
+# Create end cell at the random position at the bottom
+end_y = random.randrange(size)
+if end_y % 2 == 0:
+    if end_y == 0:
+        end_y += 1
+    else:
+        end_y -= 1
+maze.layout[size - 1][end_y].set_type('air')
+
+# Check if out folder exists, else - create it
+path = os.path.dirname(os.path.realpath(__file__)) + '/out/'
+if not os.path.exists(path):
+    os.makedirs(path)
+
+# Save maze as png
+iw = ImageWriter(maze, name, path)
+iw.create_image()
+
+# maze.print_maze()
 
 # End of script
 exit()
