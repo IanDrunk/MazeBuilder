@@ -49,3 +49,6 @@ venv.bak/
 
 # PyCharm files
 .idea
+
+# Output images
+out/

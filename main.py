@@ -1,7 +1,9 @@
+import os
 import sys
 import random
 
 from scr.Maze import Maze
+from scr.ImageWriter import ImageWriter
 
 # Constants
 ARG_COUNT = 3
@@ -59,9 +61,16 @@ if end_y % 2 == 0:
         end_y -= 1
 maze.layout[size - 1][end_y].set_type('air')
 
+# Check if out folder exists, else - create it
+path = os.path.dirname(os.path.realpath(__file__)) + '/out/'
+if not os.path.exists(path):
+    os.makedirs(path)
 
-# TODO: Save maze as png
-maze.print_maze()
+# Save maze as png
+iw = ImageWriter(maze, name, path)
+iw.create_image()
+
+# maze.print_maze()
 
 # End of script
 exit()
